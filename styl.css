@@ -1,0 +1,319 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  
+}
+
+body {
+    background-color: #efefef;
+    width: 100%
+    
+    display: flex;
+    align-items: center; 
+    overflow-x: hidden;
+    
+    
+   
+}
+
+header{
+    
+    background: linear-gradient(to bottom, #ffffff, #ee5a24);
+    
+    
+}
+
+
+
+nav{
+    background-color: #e83015;
+    height: 80px;
+    padding: 27px;
+    
+}
+
+
+
+.header .logo_ixd img{
+  width: 65px;
+  height:54px;
+  padding-bottom: 2px;
+  animation: flyInLeftScale 1s ease-out forwards;
+}
+
+@keyframes flyInLeftScale {
+    0% {
+        transform: translateX(-100%) scale(0.5); /* 初始位置和縮放 */
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0) scale(1);       /* 最終位置和正常大小 */
+        opacity: 1;
+    }
+}
+.nav-links {
+    
+    
+    list-style: none;
+    display: flex;
+    justify-content: space-between; /* 水平分布對齊 */
+    justify-self: center; /* 垂直居中對齊 */
+    gap: 210px;
+    
+}
+
+
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    border: 1.5px solid #ffffff;
+    padding: 7px;
+    border-radius: 10px;
+    font-family: "Noto Sans HK", sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+    transition: color 0.3s ease; /* 添加過渡效果，使變色平滑 */
+}
+
+/* 次選單樣式 */
+.dropdown {
+    list-style: none;
+    position: absolute;
+    top: 100%; /* 放在主選單的下方 */
+    left: 0;
+    display: none; /* 初始隱藏 */
+    background-color: #333;
+    padding: 0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    min-width: 160px;
+}
+
+.dropdown li a {
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+    display: block;
+    background-color: #fff;
+}
+
+.dropdown li a:hover {
+    background-color: #e0f7fa; /* 滑鼠懸停時變色 */
+}
+
+/* 當主選單的 "近期活動" 懸停時顯示次選單 */
+header ul li:hover .dropdown {
+    display: block;
+}
+
+.nav-links a:hover {
+    color: rgb(255, 217, 0); /* 滑鼠懸停時變成的顏色 */
+}
+
+.master_img img{
+    width: 1250px ;
+    height: 670px;
+   
+}
+
+.master {
+    text-align: center;
+    padding-top: 27px;
+}
+
+.banner {
+
+    text-align: center;
+    padding: 2rem;
+}
+
+.banner .title_left{
+    float: left;
+    text-align: left;
+    padding: 50px;
+    
+}
+
+.banner .title_right{
+    float: right;
+    display: flex; /* 啟用 Flexbox */
+    justify-content: space-between;
+    margin-right: 750px;
+    margin-top: 60px;
+    
+    
+}
+
+.banner .title_left .title_LOGO img{
+    width: 278px;
+    height: 52px;
+    position: relative;
+    animation: flyInLeftScale 1s ease-out forwards;
+    
+    
+}
+
+@keyframes flyInLeftScale {
+    0% {
+        transform: translateX(-100%) scale(0.5); /* 初始位置和縮放 */
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0) scale(1);       /* 最終位置和正常大小 */
+        opacity: 1;
+    }
+}
+
+.banner .title_1 {
+    font-size: 40px;
+    margin-bottom: 0.5rem;
+    margin-top: 20px;
+    font-weight: bold;
+    font-family:  "Rammetto One", sans-serif;
+    color: #ffffff; /* 設置文字顏色為透明 */
+    -webkit-text-stroke: 0.1px black; /* 設置文字的描邊 */
+}
+
+.banner .title_2{
+    font-size: 40px;
+    font-weight:  900;
+    font-family:  "Noto Sans HK", sans-serif;
+    color: #d62020; /* 設置文字顏色為透明 */
+    
+}
+
+.banner .title_3{
+    padding-top:200px ;
+    font-size: 20px;
+    font-weight: normal;
+    font-family: "Noto Sans HK", sans-serif;
+    padding-bottom: 30px;
+}
+
+.banner .line_01{
+    border: none;             /* 移除默認邊框 */
+    border-top: 3px dashed #474747; /* 設置上邊線 */
+    width: 340px     
+       
+    
+}  
+
+.banner .line_02{
+    border: none;             /* 移除默認邊框 */
+    border-left: 3px dashed #474747; 
+    height: 635px; 
+    padding: 70px;
+       
+}
+
+.banner .title_left{
+    margin-left: 50px;
+}
+
+.banner .mouse img{
+    width: 100px;
+    height: 100px;
+    margin-left:150px ;
+    animation: spinFlyInLoop 5s ease-out infinite;
+}
+
+@keyframes spinFlyInLoop {
+    0% {
+        transform: rotate(-360deg) translateX(-10vw); /* 從左側畫面外旋轉並移動 */
+        opacity: 0; /* 初始為隱藏 */
+    }
+    100% {
+        transform: rotate(0deg) translateX(0); /* 旋轉至正常位置並進入畫面 */
+        opacity: 1; /* 完全顯示 */
+    }
+   
+}
+
+.banner .img_controler img{
+    width: 635px;
+    height: 635px;
+    
+  
+    position: relative;
+    animation: flyInRight 1.5s ease-out forwards; /* 動畫持續 1 秒，並向右飛入 */
+    
+    
+}
+
+.new_01 {
+    z-index: 1; /* 較低的 z-index */
+}
+
+.new_02 {
+    z-index: 2; /* 較高的 z-index，顯示在 box1 之上 */
+}
+
+.new_03 {
+    z-index: 3; /* 較高的 z-index，顯示在 box1 之上 */
+}
+
+.new_01 , .new_02 , .new_03{
+    position: absolute;
+    width: 635px;
+    height: 635px;
+    opacity: 0; /* 初始為隱藏 */
+    animation: slideShow 12s infinite; /* 動畫名稱、總持續時間、無限循環 */
+}
+
+.new_01:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.new_02:nth-child(2) {
+    animation-delay: 4s; /* 延遲第二張圖片的播放 */
+}
+
+.new_03:nth-child(3) {
+    animation-delay: 8s; /* 延遲第三張圖片的播放 */
+}
+
+@keyframes slideShow {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 1;
+    }
+    40% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes flyInRight {
+    0% {
+        transform: translateX(100%); /* 初始位置在螢幕外右側 */
+        opacity: 0;                  /* 隱藏 */
+    }
+    100% {
+        transform: translateX(0);    /* 最終位置 */
+        opacity: 1;                  /* 完全顯示 */
+    }
+}
+
+ footer {
+    background-color: #f24120;
+    display: flex;
+    text-align: center;
+    width: 100%;
+    
+   
+    
+}
+
+footer p{
+    
+    padding: 1rem;
+    color: white;
+}

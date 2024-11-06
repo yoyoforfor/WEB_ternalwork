@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  
+}
+
+body  {
+    
+    background-image: url('web2.png');
+    
+    background-size:cover;
+    
+    background-repeat: no-repeat;
+           
+    width: 100%
+    
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+   
+    
+    
+   
+}
+
+.imgain img {
+
+    width: 655px;
+    height: 436px;
+    display: grid;
+    place-items: center; /* 同時垂直和水平居中 */
+    
+    border: 6px solid #eaeaea; /* 邊框用於示範 */
+    margin-top: 250px;
+    margin-left: 460px;
+    position: relative;
+    animation: flyInRight 1.5s ease-out forwards; /* 動畫持續 1 秒，並向右飛入 */
+}
+
+.ac_1 {
+    z-index: 1; /* 較低的 z-index */
+}
+
+.ac_2 {
+    z-index: 2; /* 較高的 z-index，顯示在 box1 之上 */
+}
+
+.ac_3 {
+    z-index: 3; /* 較高的 z-index，顯示在 box1 之上 */
+}
+
+.ac_4 {
+    z-index: 4; /* 較高的 z-index，顯示在 box1 之上 */
+}
+
+.ac_1 , .ac_2 , .ac_3, .ac_4{
+    position: absolute;
+    width: 635px;
+    height: 635px;
+    opacity: 0; /* 初始為隱藏 */
+    animation: slideShow 16s infinite; /* 動畫名稱、總持續時間、無限循環 */
+}
+
+.ac_1:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.ac_2:nth-child(2) {
+    animation-delay: 4s; /* 延遲第二張圖片的播放 */
+}
+
+.ac_3:nth-child(3) {
+    animation-delay: 8s; /* 延遲第三張圖片的播放 */
+}
+
+.ac_4:nth-child(3) {
+    animation-delay: 12s; /* 延遲第三張圖片的播放 */
+}
+
+@keyframes slideShow {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 1;
+    }
+    40% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes flyInRight {
+    0% {
+        transform: translateX(100%); /* 初始位置在螢幕外右側 */
+        opacity: 0;                  /* 隱藏 */
+    }
+    100% {
+        transform: translateX(0);    /* 最終位置 */
+        opacity: 1;                  /* 完全顯示 */
+    }
+
+
